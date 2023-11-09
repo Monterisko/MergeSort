@@ -132,7 +132,7 @@ public class AlgTest {
             System.out.println("Czas wykonania algorytmu: " + executeTimeS + " s. Przy rozmiarze danych:  " + array.length);
             assertTrue("Czas wykonania algorytmu powinien być mniejszy niż 1 s", executeTimeS < 1);
         }
-        writeDataToCSV(speedData, "60k.csv");
+        writeDataToCSV(speedData, "60k_sorted.csv");
     }
     @Test
     public void testMergeSortExecuteTime70k(){
