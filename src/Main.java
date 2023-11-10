@@ -3,17 +3,17 @@ import java.util.Random;
 public class Main {
 
     static Random random = new Random();
-    static int[] tablica = generateArray(10000);
+    static Integer[] tablica = generateArray(10000);
 
-    static int[] generateArray(int size){
-        tablica = new int[size];
+    static Integer[] generateArray(int size){
+        tablica = new Integer[size];
         for (int i = 0; i < size; i++) {
             tablica[i] = random.nextInt(1000000);
         }
         return tablica;
     }
 
-    public static void MergeSort(int[] tab, int start, int stop){
+    public static void MergeSort(Integer[] tab, int start, int stop){
         if(start < stop){
             int m = (start + stop) / 2;
             MergeSort(tab, start, m);
@@ -22,7 +22,7 @@ public class Main {
         }
     }
 
-    public static void Merge(int[] tab, int start, int mid, int stop){
+    public static void Merge(Integer[] tab, int start, int mid, int stop){
         int n1 = mid - start + 1;
         int n2 = stop - mid;
 
