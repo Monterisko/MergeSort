@@ -36,7 +36,7 @@ public class AlgTest {
             System.out.println("Czas wykonania algorytmu: " + executeTimeS + " s. Przy rozmiarze danych:  " + array.length);
             assertTrue("Czas wykonania algorytmu powinien być mniejszy niż 1 s", executeTimeS < 1);
         }
-        writeDataToCSV(speedData, "30M.csv");
+        writeDataToCSV(speedData, "30.csv");
     }
 
     @Test
@@ -54,7 +54,7 @@ public class AlgTest {
             System.out.println("Czas wykonania algorytmu: " + executeTimeS + " s. Przy rozmiarze danych:  " + array.length);
             assertTrue("Czas wykonania algorytmu powinien być mniejszy niż 1 s", executeTimeS < 1);
         }
-        writeDataToCSV(speedData, "50M.csv");
+        writeDataToCSV(speedData, "50.csv");
     }
 
     @Test
@@ -72,7 +72,7 @@ public class AlgTest {
             System.out.println("Czas wykonania algorytmu: " + executeTimeS + " s. Przy rozmiarze danych:  " + array.length);
             assertTrue("Czas wykonania algorytmu powinien być mniejszy niż 1 s", executeTimeS < 1);
         }
-        writeDataToCSV(speedData, "10M.csv");
+        writeDataToCSV(speedData, "10.csv");
     }
     @Test
     public void testMergeSortExecuteTime70(){
@@ -89,7 +89,7 @@ public class AlgTest {
             System.out.println("Czas wykonania algorytmu: " + executeTimeS + " s. Przy rozmiarze danych:  " + array.length);
             assertTrue("Czas wykonania algorytmu powinien być mniejszy niż 1 s", executeTimeS < 1);
         }
-        writeDataToCSV(speedData, "70M.csv");
+        writeDataToCSV(speedData, "70.csv");
     }
     @Test
     public void testMergeSortExecuteTime10k(){

@@ -35,11 +35,16 @@ public class Main {
     }
 
     public static void MergeSort(Integer[] tab, int start, int stop){
-        if(start < stop){
-            int m = (start + stop) / 2;
-            MergeSort(tab, start, m);
-            MergeSort(tab, m + 1, stop);
-            Merge(tab, start, m, stop);
+        if(tab.length > 70){
+            if(start < stop){
+                int m = (start + stop) / 2;
+                MergeSort(tab, start, m);
+                MergeSort(tab, m + 1, stop);
+                Merge(tab, start, m, stop);
+            }
+        }
+        else {
+            InsertionSort(tab);
         }
     }
 
