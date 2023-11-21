@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
 
     static Random random = new Random();
-    static Integer[] tablica = generateArray(10000);
+    static Integer[] tablica;
 
     static Integer[] generateArray(int size){
         tablica = new Integer[size];
@@ -11,6 +11,27 @@ public class Main {
             tablica[i] = random.nextInt(1000000);
         }
         return tablica;
+    }
+
+    static void Print(Integer[] tab){
+        for (Integer integer : tab) {
+            System.out.print(integer + ", ");
+        }
+    }
+
+    static void InsertionSort(Integer[] arr)
+    {
+        int n = arr.length;
+        for (int i = 1; i < n; ++i) {
+            int key = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
     }
 
     public static void MergeSort(Integer[] tab, int start, int stop){
@@ -62,14 +83,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-        for (int i = 0; i < tablica.length; i++) {
-            System.out.print(tablica[i] + ", ");
-        }
-        System.out.println("\n-----------------------------------------------------------------------------------------------------------");
-        for (int i = 0; i < tablica.length; i++) {
-            System.out.print(tablica[i] + ", ");
-        }
     }
 
 }
