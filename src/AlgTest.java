@@ -11,6 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class AlgTest {
 
     long startTime;
+    int numberEl = 10000;
     List<Long> speedData = new ArrayList<>();
     private void writeDataToCSV(List<Long> speedData, String fileName){
         try (FileWriter writer = new FileWriter(fileName)) {
@@ -44,7 +45,7 @@ public class AlgTest {
         List<Integer> MIS_30 = readCSV("30IM.csv");
         List<Integer> MIS_50 = readCSV("50IM.csv");
         List<Integer> MIS_70 = readCSV("70IM.csv");
-        List<Integer> MS_200k = readCSV("200k_sorted_reverse.csv");
+        List<Integer> MS_200k = readCSV("10k_sorted_reverse.csv");
         double avrMS = 0.0;
         double avrMIS_10 = 0.0;
         double avrMIS_30 = 0.0;
@@ -103,7 +104,7 @@ public class AlgTest {
     @Test
     public void testMergeISortExecuteTime10(){
         for (int i = 0; i < 100; i++) {
-            Integer[] array = Main.generateArray(200000);
+            Integer[] array = Main.generateArray(numberEl);
             startTime = System.currentTimeMillis();
             Main.MergeInsertSort(array, 0, array.length - 1, 10);
             long endTime = System.currentTimeMillis();
@@ -118,7 +119,7 @@ public class AlgTest {
     @Test
     public void testMergeISortExecuteTime30(){
         for (int i = 0; i < 100; i++) {
-            Integer[] array = Main.generateArray(200000);
+            Integer[] array = Main.generateArray(numberEl);
             startTime = System.currentTimeMillis();
             Main.MergeInsertSort(array, 0, array.length - 1, 30);
             long endTime = System.currentTimeMillis();
@@ -133,7 +134,7 @@ public class AlgTest {
     @Test
     public void testMergeISortExecuteTime50(){
         for (int i = 0; i < 100; i++) {
-            Integer[] array = Main.generateArray(200000);
+            Integer[] array = Main.generateArray(numberEl);
             startTime = System.currentTimeMillis();
             Main.MergeInsertSort(array, 0, array.length - 1, 50);
             long endTime = System.currentTimeMillis();
@@ -148,7 +149,7 @@ public class AlgTest {
     @Test
     public void testMergeISortExecuteTime70(){
         for (int i = 0; i < 100; i++) {
-            Integer[] array = Main.generateArray(200000);
+            Integer[] array = Main.generateArray(numberEl);
             startTime = System.currentTimeMillis();
             Main.MergeInsertSort(array, 0, array.length - 1, 70);
             long endTime = System.currentTimeMillis();
